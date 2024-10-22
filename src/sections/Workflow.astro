@@ -1,0 +1,102 @@
+---
+import Card from "../components/Card.astro";
+---
+
+<section class="flex flex-col justify-center items-center py-8 space-y-8" id="workflow">
+  <h1 class="text-4xl md:text-5xl font-extrabold text-[#268BA9] px-4">¿Cómo funcionamos?</h1>
+  <section class="splide w-full xl:hidden" id="cards-slider">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide flex justify-center">
+          <Card
+            icon="/whatsapp.svg"
+            title="Contáctanos"
+            description={[
+              "Contáctanos a través de WhatsApp o redes sociales y",
+              "agenda tu servicio de grabación indicándonos lugar y hora del partido.",
+            ]}
+          />
+        </li>
+        <li class="splide__slide flex justify-center">
+          <Card
+            icon="/football.svg"
+            title="Juega el partido"
+            description={["Desarrolla tu partido", "con normalidad."]}
+          />
+        </li>
+        <li class="splide__slide flex justify-center">
+          <Card
+            icon="/cloud.svg"
+            title="Recibe los videos de tu partido"
+            description={[
+              "Recibirás un link donde podrás ver y descargar, el mejor contenido de tu partido:",
+              "video completo, jugadas destacadas y más.",
+            ]}
+          />
+        </li>
+        <li class="splide__slide flex justify-center">
+          <Card
+            icon="/wallet.svg"
+            title="Tarifas accesibles y competitivas"
+            description={[
+              "Graba tus partidos a un precio increíble:",
+              "sólo $1.000 por minuto jugado (con un costo mínimo de $60.000 por partido).",
+            ]}
+          />
+        </li>
+      </ul>
+    </div>
+  </section>
+  <div class="hidden xl:flex xl:space-x-8">
+    <Card
+      icon="/whatsapp.svg"
+      title="Contáctanos"
+      description={[
+        "Contáctanos a través de WhatsApp o redes sociales y",
+        "agenda tu servicio de grabación indicándonos lugar y hora del partido.",
+      ]}
+    />
+    <Card
+      icon="/football.svg"
+      title="Juega el partido"
+      description={["Desarrolla tu partido", "con normalidad."]}
+    />
+    <Card
+      icon="/cloud.svg"
+      title="Recibe los videos de tu partido"
+      description={[
+        "Recibirás un link donde podrás ver y descargar, el mejor contenido de tu partido:",
+        "video completo, jugadas destacadas y más.",
+      ]}
+    />
+    <Card
+      icon="/wallet.svg"
+      title="Tarifas accesibles y competitivas"
+      description={[
+        "Graba tus partidos a un precio increíble:",
+        "sólo $1.000 por minuto jugado (con un costo mínimo de $60.000 por partido).",
+      ]}
+    />
+  </div>
+</section>
+
+<script>
+  import "@splidejs/splide/css";
+  import Splide from "@splidejs/splide";
+
+  new Splide("#cards-slider", {
+    pagination: false,
+    arrows: false,
+    padding: "12.5vw",
+    mediaQuery: "min",
+    breakpoints: {
+      500: {
+        padding: "20vw"
+      },
+      1000: {
+        perPage: 2,
+        padding: "10vw"
+      },
+    },
+  }).mount();
+</script>

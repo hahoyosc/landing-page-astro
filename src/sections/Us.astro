@@ -1,0 +1,61 @@
+<section class="text-center space-y-8 p-4 md:p-12" id="us">
+  <h1 class="text-4xl md:text-5xl font-extrabold text-[#268BA9] px-4">
+    Nuestro equipo
+  </h1>
+  <div class="flex flex-col justify-center space-y-4 md:flex-row md:space-y-0 md:px-16 md:justify-center md:space-x-4">
+    <section class="splide" id="avatar-slider">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img
+              src="/hector.jpg"
+              alt="Héctor"
+              class="rounded-full w-64 h-64 mx-auto object-cover object-top grayscale"
+            />
+          </li>
+          <li class="splide__slide">
+            <img
+              src="/sebastian.jpg"
+              alt="Sebastián"
+              class="rounded-full w-64 h-64 mx-auto grayscale"
+            />
+          </li>
+          <li class="splide__slide">
+            <img
+              src="/santiago.jpg"
+              alt="Santiago"
+              class="rounded-full w-64 h-64 mx-auto grayscale"
+            />
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div class="space-y-4 md:content-center md:text-start">
+      <h2 class="font-extrabold text-xl md:text-4xl">
+        ¡El fútbol también es nuestra pasión!
+      </h2>
+      <p class="px-16 md:text-2xl md:px-0">
+        Somos <strong>Sebastián</strong>, <strong>Héctor</strong> y <strong
+          >Santiago</strong
+        >, trabajamos para que vivas la pasión del fútbol hasta fuera de la
+        cancha.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  import "@splidejs/splide/css";
+  import Splide from "@splidejs/splide";
+
+  new Splide("#avatar-slider", {
+    pagination: false,
+    arrows: false,
+    isNavigation: false,
+    type: "fade",
+    rewind: true,
+    autoplay: true,
+    interval: 3000,
+    speed: 1000,
+  }).mount();
+</script>

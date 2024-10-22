@@ -1,0 +1,53 @@
+<section
+  class="bg-[#0E3560] flex flex-col items-center justify-center space-y-4 md:space-y-12 py-8 md:py-12 md:px-36"
+  id="highlights"
+>
+  <div
+    class="flex flex-col space-y-4 md:space-y-0 items-center md:flex-row md:w-full md:justify-between"
+  >
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white max-w-full px-4">
+      Destacados de la semana
+    </h1>
+    <img
+      class="md:w-52 px-4"
+      src="/tag.svg"
+      alt="Like a Pro tag"
+      width="150px"
+    />
+  </div>
+  <section
+    class="splide md:max-w-5xl"
+    aria-labelledby="carousel-heading"
+    id="highlights-slider"
+  >
+    <div class="splide__track pb-8">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <video src="/001146_-_Goal.mp4" controls></video>
+        </li>
+        <li class="splide__slide">
+          <video src="/001820_-_Goal.mp4" controls></video>
+        </li>
+        <li class="splide__slide">
+          <video src="/002058_-_Goal.mp4" controls></video>
+        </li>
+        <li class="splide__slide">
+          <video src="/004705_-_Goal.mp4" controls></video>
+        </li>
+      </ul>
+    </div>
+  </section>
+</section>
+
+<script>
+  import "@splidejs/splide/css";
+  import Splide from "@splidejs/splide";
+
+  const splide = new Splide(".splide", {
+    type: "loop",
+    pagination: true,
+    arrows: true,
+  });
+
+  splide.mount();
+</script>
